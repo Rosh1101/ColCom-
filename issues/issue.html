@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Issue</title>
+    <link rel="stylesheet" href="issue.css">
+</head>
+<body>
+
+    <header class="navbar">
+    <div class="nav-left">
+        <div class="logo">
+            <span class="logo-text"><b>ColCom</b></span>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="./issues/issue.html">Report Issue</a>
+            <a href="./map/map.html">Campus Map</a>
+            <a href="./communities/communities.html">Communities</a>
+            <a href="#">Gallery</a>
+            <a href="#">Feedback</a>
+        </nav>
+    </div>
+
+    <div class="nav-right">
+        <button class="login-btn">Login</button>
+        <button class="signup-btn">Sign Up</button>
+    </div>
+</header>
+
+<div class="container">
+    <h2 class="title">Submit a Report</h2>
+    <p class="subtitle">Fill out the form below to report a campus issue</p>
+
+    <form id="issueForm" class="issue-form">
+
+        <label>Issue Title *</label>
+        <input id="titleInput" type="text" placeholder="Brief description of the issue" required>
+
+        <label>Category *</label>
+        <select id="categoryInput" required>
+            <option value="">Select a category</option>
+            <option value="safety">Safety</option>
+            <option value="maintenance">Maintenance</option>
+            <option value="cleanliness">Cleanliness</option>
+            <option value="technical">Technical</option>
+        </select>
+
+        <label>Location</label>
+        <input id="locationInput" type="text" placeholder="Where is this issue located?">
+
+        <label>Description *</label>
+        <textarea id="descInput" placeholder="Provide detailed information about the issue" required></textarea>
+
+        <button type="submit" class="submit-btn">Submit Issue</button>
+    </form>
+</div>
+
+<!-- ⬇ Recent Issues Section -->
+<div class="recent-container">
+    <h2 class="recent-title">Recent Issues</h2>
+    <div id="recentIssues"></div>
+</div>
+
+<script src="recent.js"></script>
+
+
+
+
+
+</body>
+</html>
